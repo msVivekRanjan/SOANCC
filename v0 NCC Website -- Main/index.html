@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOA NCC - 4(O) CTC | Unity and Discipline</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Custom cursor elements -->
+    <div class="cursor"></div>
+    <div class="cursor-inner"></div>
+    <!-- Enhanced Navigation with Hamburger Menu -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <!-- Enhanced Logo Section -->
+            <div class="nav-brand">
+                <div class="logo-container">
+                    <div class="logo-circle">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="logo-star">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="brand-text">
+                        <h1 class="brand-title">SOA NCC</h1>
+                        <p class="brand-subtitle">4(O) CTC</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Motto -->
+            <div class="nav-motto">
+                <span class="motto-text"></span>
+            </div>
+
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu-btn" id="hamburgerMenuBtn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Full Screen Navigation Menu -->
+        <div class="fullscreen-menu" id="fullscreenMenu">
+            <div class="menu-overlay"></div>
+            <div class="menu-content">
+                <div class="menu-header">
+                    <div class="menu-logo">
+                        <div class="logo-circle">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="brand-text">
+                            <h2>SOA NCC</h2>
+                            <p>4(O) CTC</p>
+                        </div>
+                    </div>
+                    <button class="menu-close-btn" id="menuCloseBtn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="menu-links">
+                    <a href="#home" class="menu-link active" data-section="home">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#about" class="menu-link" data-section="about">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="#objectives" class="menu-link" data-section="objectives">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Objectives</span>
+                    </a>
+                    <a href="#activities" class="menu-link" data-section="activities">
+                        <i class="fas fa-running"></i>
+                        <span>Activities</span>
+                    </a>
+                    <a href="#achievements" class="menu-link" data-section="achievements">
+                        <i class="fas fa-trophy"></i>
+                        <span>Achievements</span>
+                    </a>
+                    <a href="#alumni" class="menu-link" data-section="alumni">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Alumni</span>
+                    </a>
+                    <a href="#join" class="menu-link" data-section="join">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Join</span>
+                    </a>
+                    <a href="#contact" class="menu-link" data-section="contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+                <div class="menu-footer">
+                    <p>"Unity and Discipline"</p>
+                    <div class="menu-social">
+                        <a href="#" class="menu-social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="menu-social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="menu-social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="menu-social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="hero-pattern"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i>
+                <span>Excellence in Leadership Since Formation</span>
+                <i class="fas fa-star"></i>
+            </div>
+
+            <h1 class="hero-title">SOA NCC</h1>
+            <h2 class="hero-subtitle">4(O) CTC</h2>
+            <p class="hero-description">
+                Forging Leaders of Tomorrow Through Unity, Discipline, and Unwavering Service to the Nation
+            </p>
+
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('about')">
+                    <span>Discover Our Legacy</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <button class="btn btn-outline" onclick="scrollToSection('join')">
+                    Begin Your Journey
+                </button>
+                <button class="btn btn-success" onclick="scrollToSection('achievements')">
+                    Our Achievements
+                </button>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="media/unit pic.webp" alt="SOA NCC Cadets in Formation" />
+                        <div class="image-badge">
+                            <div class="badge-number">15+</div>
+                            <div class="badge-text">Years of Excellence</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="section-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>About Our Unit</span>
+                    </div>
+                    <h2 class="section-title">
+                        Shaping Tomorrow's
+                        <span class="ncc-gradient-text">Leaders</span>
+                    </h2>
+
+                    <div class="about-text">
+                        <p>
+                            Established as an integral part of the prestigious <strong>4(O) CTC under the Odisha Directorate</strong>, 
+                            SOA NCC Unit stands as a beacon of excellence in character development, leadership training, and national service.
+                        </p>
+                        <p>
+                            Affiliated with <strong>Siksha 'O' Anusandhan University</strong>, we are committed to nurturing young minds 
+                            into disciplined citizens and future leaders who embody the highest ideals of patriotism, integrity, and service.
+                        </p>
+                    </div>
+
+                    <div class="vision-mission">
+                        <div class="vision-card">
+                            <div class="card-icon ncc-red">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3>Our Vision</h3>
+                            <p>Empowering youth with leadership excellence and unwavering national consciousness</p>
+                        </div>
+                        <div class="mission-card">
+                            <div class="card-icon ncc-navy">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Our Motto</h3>
+                            <p>"Unity and Discipline" - Building tomorrow's leaders through service today</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Objectives Section -->
+    <section id="objectives" class="objectives">
+        <div class="objectives-background"></div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge white">
+                    <i class="fas fa-star"></i>
+                    <span>Core Principles</span>
+                </div>
+                <h2 class="section-title white">NCC Objectives</h2>
+                <p class="section-subtitle white">
+                    Building character, developing leadership, and fostering national unity through disciplined training and service
+                </p>
+            </div>
+
+            <div class="objectives-grid">
+                <div class="objective-card">
+                    <div class="objective-icon ncc-red">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>NCC Aims</h3>
+                    <ul>
+                        <li>Develop character, comradeship, discipline, and leadership</li>
+                        <li>Create a human resource of organized, trained youth</li>
+                        <li>Provide environment to motivate young people</li>
+                    </ul>
+                </div>
+
+                <div class="objective-card">
+                    <div class="objective-icon ncc-white">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Vision</h3>
+                    <ul>
+                        <li>Empower volunteer youth to become leaders</li>
+                        <li>Develop leadership and character building</li>
+                        <li>Create disciplined and responsible citizens</li>
+                    </ul>
+                </div>
+
+                <div class="objective-card">
+                    <div class="objective-icon ncc-skyblue">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Motto</h3>
+                    <ul>
+                        <li>Unity and Discipline as core values</li>
+                        <li>National Integration and secular outlook</li>
+                        <li>Spirit of adventure and sportsmanship</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Activities Section -->
+    <section id="activities" class="activities">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Our Activities</span>
+                </div>
+                <h2 class="section-title">
+                    Excellence in
+                    <span class="ncc-gradient-text">Action</span>
+                </h2>
+                <p class="section-subtitle">
+                    Engaging in diverse activities that build character, serve the nation, and develop exceptional leadership skills
+                </p>
+            </div>
+
+            <div class="activities-grid">
+                <div class="activity-card ncc-navy">
+                    <div class="activity-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Precision Parade</h3>
+                    <p>Masterful drill formations and ceremonial parades showcasing discipline, coordination, and military precision</p>
+                </div>
+
+                <div class="activity-card red">
+                    <div class="activity-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Blood Donation Drives</h3>
+                    <p>Life-saving blood donation camps serving our community with compassion and dedication to humanity</p>
+                </div>
+
+                <div class="activity-card green">
+                    <div class="activity-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Environmental Conservation</h3>
+                    <p>Tree plantation drives and environmental awareness campaigns for a sustainable future</p>
+                </div>
+
+                <div class="activity-card ncc-red">
+                    <div class="activity-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Swachh Bharat Mission</h3>
+                    <p>Comprehensive cleanliness drives and awareness programs building a cleaner, healthier India</p>
+                </div>
+
+                <div class="activity-card purple">
+                    <div class="activity-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Guard of Honour</h3>
+                    <p>Distinguished ceremonial duties and guard of honour for dignitaries and state functions</p>
+                </div>
+
+                <div class="activity-card ncc-skyblue">
+                    <div class="activity-icon">
+                        <i class="fas fa-campground"></i>
+                    </div>
+                    <h3>Adventure Training</h3>
+                    <p>Challenging training camps, adventure activities, and comprehensive skill development programs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Messages Section -->
+    <section id="messages" class="messages">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-users"></i>
+                    <span>Leadership Wisdom</span>
+                </div>
+                <h2 class="section-title">Words from Our Leaders</h2>
+                <p class="section-subtitle">
+                    Inspiring messages from our distinguished officers who guide our path to excellence
+                </p>
+            </div>
+
+            <div class="messages-grid">
+                <div class="message-card">
+                    <div class="officer-image">
+                        <img src="media/Leaders/Satyabrata GC.png" alt="Col. Satyabrata Swain" />
+                        <div class="officer-badge ncc-red">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Col. Satyabrata Swain</h3>
+                    <p class="officer-rank ncc-red">Group Commander</p>
+                    <blockquote>
+                        "True leadership lies not in commanding others, but in inspiring them to discover their own potential and serve the nation with unwavering dedication."
+                    </blockquote>
+                </div>
+
+                <div class="message-card">
+                    <div class="officer-image">
+                        <img src="/media/Leaders/co.png" alt="Lt. Col. Shantunu Dey" />
+                        <div class="officer-badge ncc-navy">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Lt. Col. Shantunu Dey</h3>
+                    <p class="officer-rank ncc-navy">Officer Commanding</p>
+                    <blockquote>
+                        "Discipline is the foundation upon which character is built. Through NCC, we forge not just soldiers, but citizens of exceptional integrity."
+                    </blockquote>
+                </div>
+
+                <div class="message-card">
+                    <div class="officer-image">
+                        <img src="/media/Leaders/SSP CTO.png" alt="Sreyanshu Satya Prakash" />
+                        <div class="officer-badge ncc-white-border">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Sreyanshu Satya Prakash</h3>
+                    <p class="officer-rank white-text">CTO</p>
+                    <blockquote>
+                        "Every challenge faced in training becomes a stepping stone to greatness. NCC provides the platform where ordinary youth become extraordinary leaders."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Current Ranks Section -->
+    <section id="ranks" class="ranks">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Cadet Leadership</span>
+                </div>
+                <h2 class="section-title">
+                    Our Distinguished
+                    <span class="ncc-gradient-text">Cadet Officers</span>
+                </h2>
+                <p class="section-subtitle">
+                    Meet our exceptional cadet leaders who exemplify excellence and inspire their peers through dedicated service
+                </p>
+            </div>
+
+            <div class="ranks-grid">
+                <div class="cadet-card ncc-red">
+                    <div class="cadet-image">
+                        <img src="/media/Rank Holders/SUO Devi pic.png" alt="Devi Prasad Sarangi" />
+                        <div class="cadet-rank-badge">SUO</div>
+                    </div>
+                    <h3>Devi Prasad Sarangi</h3>
+                    <p class="cadet-rank">SUO</p>
+                    <p class="cadet-year">Third Year</p>
+                    <p class="cadet-intro">Leading with exceptional dedication and inspiring fellow cadets through exemplary service and unwavering commitment to NCC values.</p>
+                </div>
+
+                <div class="cadet-card ncc-white-card">
+                    <div class="cadet-image">
+                        <img src="/media/Rank Holders/JUO Raj pic.png" alt="Raj Sahasranshu Biswal" />
+                        <div class="cadet-rank-badge ncc-navy-badge">JUO</div>
+                    </div>
+                    <h3>Raj Sahasranshu Biswal</h3>
+                    <p class="cadet-rank ncc-navy">JUO</p>
+                    <p class="cadet-year">Third Year</p>
+                    <p class="cadet-intro">Committed to excellence in training and fostering exceptional team spirit among junior cadets through mentorship.</p>
+                </div>
+
+                <div class="cadet-card ncc-navy">
+                    <div class="cadet-image">
+                        <img src="/media/Rank Holders/JUO Nick pic.png" alt="Nikhilesh Sahoo" />
+                        <div class="cadet-rank-badge ncc-white-badge">JUO</div>
+                    </div>
+                    <h3>Nikhilesh Sahoo</h3>
+                    <p class="cadet-rank white">JUO</p>
+                    <p class="cadet-year white">Third Year</p>
+                    <p class="cadet-intro white">Passionate about comprehensive training and dedicated to mentoring new cadets in core NCC values and traditions.</p>
+                </div>
+
+                <div class="cadet-card ncc-skyblue">
+                    <div class="cadet-image">
+                        <img src="/media/Rank Holders/JUO Anubhav Pic.png" alt="Anubhav Samantray" />
+                        <div class="cadet-rank-badge">JUO</div>
+                    </div>
+                    <h3>Anubhav Samantray</h3>
+                    <p class="cadet-rank ncc-red">JUO</p>
+                    <p class="cadet-year">Second Year</p>
+                    <p class="cadet-intro">Dedicated to community service excellence and upholding the highest standards of discipline and leadership.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Achievements Carousel -->
+    <section id="achievements" class="achievements">
+        <div class="achievements-background"></div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge white">
+                    <i class="fas fa-award"></i>
+                    <span>Our Pride</span>
+                </div>
+                <h2 class="section-title white">Celebrating Excellence</h2>
+                <p class="section-subtitle white">
+                    Recognizing outstanding achievements in training, competitions, and dedicated national service
+                </p>
+            </div>
+
+            <div class="achievements-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active">
+                        <img src="/placeholder.svg?height=500&width=800" alt="RDC Winner 2023" />
+                        <div class="slide-content">
+                            <h3>RDC Winner 2023</h3>
+                            <p>Republic Day Camp representation with outstanding performance at Rajpath, New Delhi</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/placeholder.svg?height=500&width=800" alt="TSC Excellence" />
+                        <div class="slide-content">
+                            <h3>TSC Excellence</h3>
+                            <p>Thal Sainik Camp participation with distinction in leadership and adventure activities</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/placeholder.svg?height=500&width=800" alt="EBSB Program" />
+                        <div class="slide-content">
+                            <h3>EBSB Program</h3>
+                            <p>Ek Bharat Shreshtha Bharat cultural exchange program promoting national integration</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/placeholder.svg?height=500&width=800" alt="Best Unit Award" />
+                        <div class="slide-content">
+                            <h3>Best Unit Award</h3>
+                            <p>Recognized as the best performing NCC unit in Eastern Command for exceptional training standards</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn prev" onclick="changeSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next" onclick="changeSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Alumni Section -->
+    <section id="alumni" class="alumni">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Alumni Excellence</span>
+                </div>
+                <h2 class="section-title">
+                    Our Distinguished
+                    <span class="ncc-gradient-text">Alumni</span>
+                </h2>
+                <p class="section-subtitle">
+                    Celebrating our exceptional alumni and their inspiring journeys of service to the nation
+                </p>
+            </div>
+
+            <div class="alumni-grid">
+                <div class="alumni-card ncc-navy">
+                    <div class="alumni-image">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Sushant Dhar" />
+                        <div class="alumni-badge">Alumni</div>
+                    </div>
+                    <h3>Sushant Dhar</h3>
+                    <p class="alumni-position">Navy SSC IT Officer</p>
+                    <p class="alumni-achievement">Recommended at 33 SSB Bhopal</p>
+                    <p class="alumni-description">Successfully recommended for Navy SSC IT, exemplifying technical excellence and leadership in naval service.</p>
+                </div>
+
+                <div class="alumni-card ncc-red">
+                    <div class="alumni-image">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Kumar Abinash" />
+                        <div class="alumni-badge">Alumni</div>
+                    </div>
+                    <h3>Kumar Abinash</h3>
+                    <p class="alumni-position">OPSC Officer</p>
+                    <p class="alumni-achievement">Rank 278 (2022)</p>
+                    <p class="alumni-description">Serving with distinction as a Group B Officer in Odisha Government, contributing to state administration excellence.</p>
+                </div>
+
+                <div class="alumni-card ncc-white-card">
+                    <div class="alumni-image">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Ankit Raj Biswal" />
+                        <div class="alumni-badge ncc-navy-badge">Alumni</div>
+                    </div>
+                    <h3>Ankit Raj Biswal</h3>
+                    <p class="alumni-position ncc-navy">Lieutenant</p>
+                    <p class="alumni-achievement">Indian Army</p>
+                    <p class="alumni-description">Commissioned as Lieutenant in the Indian Army, leading with honor after completing training at OTA Chennai.</p>
+                </div>
+
+                <div class="alumni-card ncc-skyblue">
+                    <div class="alumni-image">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Ranbir Singh" />
+                        <div class="alumni-badge">Alumni</div>
+                    </div>
+                    <h3>Ranbir Singh</h3>
+                    <p class="alumni-position">Flying Officer</p>
+                    <p class="alumni-achievement">Indian Air Force (AFCAT)</p>
+                    <p class="alumni-description">Recommended for Indian Air Force through AFCAT, ready to serve the nation in the skies with distinction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Join Section -->
+    <section id="join" class="join">
+        <div class="join-background"></div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge white">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Join Our Legacy</span>
+                </div>
+                <h2 class="section-title white">
+                    Experience the Uniform.<br>
+                    <span class="ncc-gold-text">Live the Discipline.</span>
+                </h2>
+                <p class="section-subtitle white">
+                    Embark on a transformative journey of leadership development, character building, and dedicated national service. 
+                    Join SOA NCC and become part of a legacy that shapes tomorrow's leaders.
+                </p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon ncc-red">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Adventure & Excellence</h3>
+                    <p>Thrilling expeditions, challenging camps, and outdoor adventures that build unshakeable resilience and exceptional teamwork skills</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon ncc-white">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Leadership Mastery</h3>
+                    <p>Develop exceptional leadership, communication, and strategic thinking skills highly valued by top employers and institutions</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon ncc-navy">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Character Excellence</h3>
+                    <p>Build unshakeable confidence, unwavering discipline, and strong moral character that creates lifelong success and fulfillment</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon ncc-skyblue">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Career Advancement</h3>
+                    <p>NCC certification provides significant advantages in defense services, government positions, and prestigious career opportunities</p>
+                </div>
+            </div>
+
+            <div class="join-cta">
+                <button class="btn btn-large btn-white">
+                    <span>Begin Your Journey Today</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <p class="join-note">Applications open during admission period • No fees required • Merit-based selection</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced FAQs Section -->
+    <section id="faqs" class="faqs">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Common Questions</span>
+                </div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">
+                    Get comprehensive answers to common questions about joining our prestigious NCC unit
+                </p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-number">1</div>
+                        <h3>Why should I join SOA NCC?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SOA NCC offers unparalleled opportunities for leadership development, character building, adventure training, and career advancement. Our cadets gain confidence, discipline, and skills that benefit them throughout their lives while serving the nation with pride and honor.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-number">2</div>
+                        <h3>What are the comprehensive benefits of NCC?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Benefits include exceptional leadership training, thrilling adventure activities, priority consideration in defense services, government job advantages, personality development, national integration experiences, and lifelong bonds with like-minded individuals committed to excellence.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-number">3</div>
+                        <h3>Is there any fee for joining NCC?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely no fees are required for joining NCC. The program is completely free, and cadets receive uniforms, comprehensive training, meals during camps, and participate in all activities without any financial burden.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-number">4</div>
+                        <h3>What is the selection process?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Selection is based on academic performance, physical fitness assessment, and personal interview. Interested students apply during the university admission process and must clear basic fitness standards and demonstrate commitment to NCC values.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-number">5</div>
+                        <h3>What exceptional activities and events are conducted?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We conduct precision parades, adventure training camps, community service initiatives, blood donation drives, environmental conservation projects, cultural programs, sports competitions, and participate in prestigious national-level camps and competitions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Government Links Section -->
+    <section class="gov-links">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Official Partnerships</span>
+                </div>
+                <h2 class="section-title">Associated Organizations</h2>
+                <p class="section-subtitle">
+                    Our proud associations with premier defense and government organizations
+                </p>
+            </div>
+
+            <div class="org-grid">
+                <div class="org-item">
+                    <div class="org-logo">
+                        <img src="/media/Logos/Army Logo.png" alt="Indian Army" />
+                    </div>
+                    <p>Indian Army</p>
+                </div>
+                <div class="org-item">
+                    <div class="org-logo">
+                        <img src="/media/Logos/Navy logo.png" alt="Indian Navy" />
+                    </div>
+                    <p>Indian Navy</p>
+                </div>
+                <div class="org-item">
+                    <div class="org-logo">
+                        <img src="/media/Logos/AirForce logo.png" alt="Indian Air Force" />
+                    </div>
+                    <p>Indian Air Force</p>
+                </div>
+                <div class="org-item">
+                    <div class="org-logo">
+                        <img src="/media/Logos/MOD logo.png" alt="Ministry of Defence" />
+                    </div>
+                    <p>Ministry of Defence</p>
+                </div>
+                <div class="org-item">
+                    <div class="org-logo">
+                        <img src="/media/Logos/ncc logo.png" alt="DG NCC" />
+                    </div>
+                    <p>DG NCC</p>
+                </div>
+                <div class="org-item">
+                    <div class="org-logo">
+                        <img src="/media/Logos/MyGov logo.png" alt="MyGov" />
+                    </div>
+                    <p>MyGov</p>
+                </div>
+                <div class="org-item">
+                    <div class="org-logo">
+                        <img src="/media/Logos/SSB logo.png" alt="SSB" />
+                    </div>
+                    <p>SSB</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Contact & Map Section -->
+    <section id="contact" class="contact-map">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Get in Touch</span>
+                </div>
+                <h2 class="section-title">Contact & Location</h2>
+                <p class="section-subtitle">
+                    Connect with us and find our location on campus
+                </p>
+            </div>
+
+            <div class="contact-map-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Contact Information</h3>
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <div class="contact-icon ncc-red">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p>ncc@soa.ac.in</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon ncc-navy">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Phone</h4>
+                                    <p>+91 8260961948</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon ncc-white-border">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Address</h4>
+                                    <p><strong>Siksha 'O' Anusandhan University</strong></p>
+                                    <p>Kalinga Nagar, Bhubaneswar</p>
+                                    <p>Odisha - 751030, India</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon ncc-skyblue">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Office Hours</h4>
+                                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                                    <p>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Map -->
+                <div class="map-container">
+                    <div class="map-card">
+                        <h3>Find Us on Campus</h3>
+                        <div id="map" class="interactive-map"></div>
+                        <div class="map-controls">
+                            <button class="map-btn" onclick="centerMap()">
+                                <i class="fas fa-crosshairs"></i>
+                                Center Map
+                            </button>
+                            <button class="map-btn" onclick="getDirections()">
+                                <i class="fas fa-directions"></i>
+                                Get Directions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+        <div class="footer-background"></div>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Enhanced Brand Section -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-circle">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="brand-text">
+                            <h3>SOA NCC</h3>
+                            <p>4(O) CTC</p>
+                        </div>
+                    </div>
+                    <p>Forging tomorrow's leaders through discipline, character excellence, and unwavering dedication to national service.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link ncc-red"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link ncc-navy"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link ncc-white-social"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link ncc-skyblue"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Enhanced Contact Section -->
+                <div class="footer-contact">
+                    <h4>Contact Information</h4>
+                    <div class="contact-item">
+                        <div class="contact-icon ncc-red">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <span>ncc@soa.ac.in</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon ncc-navy">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <span>+91 8260961948</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon ncc-white-border">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p><strong>Siksha 'O' Anusandhan University</strong></p>
+                            <p>Kalinga Nagar, Bhubaneswar</p>
+                            <p>Odisha - 751030, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced Quick Links -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <div class="links-grid">
+                        <a href="#about">About NCC</a>
+                        <a href="#activities">Training Programs</a>
+                        <a href="#achievements">Achievements</a>
+                        <a href="#alumni">Alumni Network</a>
+                        <a href="#join">Join NCC</a>
+                        <a href="#faqs">FAQs</a>
+                        <a href="#contact">Contact Us</a>
+                        <a href="#">Gallery</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Footer Bottom -->
+            <div class="footer-bottom">
+                <p>© 2025 SOA NCC Unit | All Rights Reserved. | Built with Pride for the Nation</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
